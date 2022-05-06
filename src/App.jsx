@@ -1,7 +1,7 @@
 import React from 'react';
 import defaultDataset from "./dataset";
 import './assets/styles/style.css'
-import {AnswersList} from "./components/index";
+import {AnswersList, Chats} from "./components/index";
 
 
 export default class App extends React.Component {
@@ -11,6 +11,7 @@ export default class App extends React.Component {
          answers: [],
          chats: [],
          currentId: "init",
+        //  datasetのinitからデータを取得
          detaset: defaultDataset,
          open: false
     }
@@ -19,6 +20,7 @@ export default class App extends React.Component {
   initAnswer = () => {
     const initDataset = this.state.detaset[this.state.currentId]
     const initAnswers = initDataset.answers;
+
     this.setState({
       answers: initAnswers
     })
@@ -32,6 +34,7 @@ export default class App extends React.Component {
     return (
       <section className="c-section">
         <div className="c-box">
+          <Chats />
           <AnswersList answers={this.state.answers} />
         </div>
 
