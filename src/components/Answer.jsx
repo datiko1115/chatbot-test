@@ -18,7 +18,7 @@ const Answer = (props) => {
 
     return (
       // マテリアルUIを埋め込む記述button
-      <Button variant="contained" color="primary">
+      <Button variant="contained" color="primary" onClick={() => props.select(props.content, props.nextId)}>
         {props.content}
       </Button>  
       // マテリアルUIを埋め込む記述button
