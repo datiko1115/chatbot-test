@@ -74,7 +74,7 @@ const defaultDataset = {
           {content: "DMする", nextId: "https://twitter.com/torahack_"},
           {content: "最初の質問に戻る", nextId: "init"}
       ],
-      question: "まずは一緒にランチでもいかがですか？DMしてください😘",
+      question: "まずは一緒にランチでもいかがですか？DMしてください",
   },
 }
 

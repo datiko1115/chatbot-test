@@ -18,12 +18,14 @@ export default class App extends React.Component {
     this.selectAnswer = this.selectAnswer.bind(this)
   }
 
+// selectAnswerから取得されたデータを表示するメソッド
   displayNextQuestion = (nextQuestionId) => {
     const chats = this.state.chats
     chats.push({
       text: this.state.dataset[nextQuestionId].question,
       type: 'question'
     })
+    console.log(nextQuestionId)
 
     this.setState({
       answers: this.state.dataset[nextQuestionId].answers,
@@ -32,6 +34,7 @@ export default class App extends React.Component {
     })
   }
 
+  // 渡されたnextQuestionIdじゃない時、つまり返信を取得するメソッド
   selectAnswer = (selectedAnswer, nextQuestionId) => {
     switch(true) {
       case (nextQuestionId === 'init'):
@@ -63,7 +66,7 @@ export default class App extends React.Component {
       <section className="c-section">
         <div className="c-box">
           <Chats chats={this.state.chats} />
-          <AnswersList answers={this.state.answers} select={this.selectAnswer}/>
+          <AnswersList answers={this.state.answers} select={this.selectAnswer} />
         </div>
 
       </section>

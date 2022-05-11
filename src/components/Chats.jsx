@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import {Chat} from './index';
 
-
-
+// マテリアルUI使う記述
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
